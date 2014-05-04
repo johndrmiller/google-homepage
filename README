@@ -6,4 +6,6 @@ http://www.theodinproject.com/web-development-101/html-css
 
 John Miller
 
-Just adding a quick test update
+prep for push to git: git add (filename) (adds file to index for next commit, -A adds all)
+
+push to git:
