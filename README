@@ -11,3 +11,5 @@ prep for push to git: git add (filename) (adds file to index for next commit, -A
 push to git: git push origin master
 
 (optional) git commit -m "(insert text here)"  (add comments to log) (this may not be optional and should come before pushing master.
+
+Testing this
