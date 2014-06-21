@@ -3,54 +3,350 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Google Results Page</title>
+	<style type="text/css">
+		body {
+			margin:0;
+		}
+		html, body {
+			position:relative;
+			min-height: 100%;
+			height:100%;
+			min-width:;
+		}
+		.headBar {
+			height:60px;
+			width:100%;
+			min-width:990px;
+			display: block;
+			background-color:#f1f1f1;
+
+		}
+
+		#sign-in {
+			background-color: #4285f4;
+			border: 1px solid #4285f4;
+			border-radius: 2px;
+			color:white;
+			width:71px;
+			height:30px;
+			font-family: arial, sans-serif;
+			font-weight:bold;
+		}
+		.logo {
+			min-width: 127px;
+			max-width: 127px;
+			height:60px;
+			line-height: 58px;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			float:left;
+		}
+		.logo2 {
+			position: absolute;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 20px 0 15px;
+
+		}
+		.logo2 img {
+			width:95px;
+			display: inline;
+			vertical-align: middle;
+		}
+
+		.rightHead {
+			position: relative;
+			float:right;
+			min-width: 116px;
+			right:0;
+			padding-left:30px;
+			padding-right: 30px;
+			text-align: right;
+			vertical-align: middle;
+			height:60px;
+			display:flex;
+			flex: 1 1 auto;
+		}
+		.rightHead div {
+			display: inline-block;
+		}
+		.apps {
+			width:30px;
+			height:30px;
+			overflow: hidden;
+			vertical-align: middle;
+		}
+		.icons {
+			position: relative;
+			top:-856px;
+			left:-65px;
+			opacity:.6;
+		}
+		.searchField {
+			height:60px;
+			line-height: 58px;
+			width:657px;
+			display: inline-block;
+			float:left;
+			min-width: 200px;
+			flex: 0 2 auto;
+			vertical-align: middle;
+			position: relative;
+		}
+		.middleSearchField {
+			display: block;
+			left:0;
+			top:0;
+			line-height: normal;
+			position: relative;
+			width: 100%
+		}
+		 .searchButton{
+			display: inline-block;
+		}
+		.innerSearchField {
+			padding-top:15px;
+			line-height: normal;
+			margin:0;
+			vertical-align: top;
+			top:0;
+			display:block;
+		}
+		.inner-2 {
+			display:block;
+		}
+		#tableHolder {
+			min-width: 20px;
+			min-height: 20px;
+			display:inline-block;
+			margin:0;
+			width:597px;
+			height:30px;
+			background-clip: padding-box;
+			background-color: #ffffff;
+			border: 1px solid #cdcdcd;
+			border-color:rgba(0,0,0,.15);
+			border-right-width: 0;
+			box-sizing: border-box;
+			vertical-align: middle;
+			/*padding-top: 3px;
+			padding-left:9px;*/
+			line-height: normal;
+		}			
+		#tableHolder:hover {
+			border-color: rgba(0,0,0,.3);
+		}
+		#tableHolder:active {
+			border-color:#4285f4;
+		}
+		table {
+			width:100%;
+			display:inline-block;
+			border-spacing: 0px;
+		}
+		.searchOptions {
+			line-height: normal;
+		}
+		
+		input {
+				border:none;
+				/*margin:1px 0 1px 0;*/
+				margin-top: 0;
+				vertical-align:top;
+				padding: 0;
+				width:100%;
+				color: #222;
+				font: 16px arial,sans-serif;
+			}
+			input:focus {
+				outline-width:0;
+				border:none;
+			}
+		.vS {
+			vertical-align: middle;
+		}
+			.iconHolder {
+				vertical-align: middle;
+			}
+				.vSearch {
+					width:29px;
+					height:23px;
+					background:url(images/vSearch.gif) no-repeat center;
+					background-size: 14px 19px;
+					border:none;
+					display: inline-block;
+					vertical-align: middle;
+					opacity: .6;
+					padding-top: 5px;					
+				}
+				.vSearch:hover {
+					opacity: 1;
+				}
+		.sField {
+			width:100%;
+			padding:3px 9px 0;
+			height:22px;
+			font-size:13px;
+		}
+		.sbHolder {
+			display: inline-block;
+			margin-left:0;
+			margin-right: 0;
+			vertical-align: top;
+			/*flex: 0 0 auto;*/
+		}
+		.sbHolder button {
+			border: 1px solid transparent;
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+			height: 30px;
+			margin: 0;
+			outline: none;
+			padding: 0 0;
+			width: 60px;
+			box-shadow: none;
+			box-sizing: border-box;
+			background: #4285f4;
+			background: linear-gradient(top,#4387fd,#4683ea);
+			vertical-align: top;
+			cursor: default;
+			display: inline-block;
+			font-weight: bold;
+			line-height: 29px;
+			min-width: 54px;
+			padding: 0 8px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 2px;
+		}
+		.searchIcon {
+			background-position: -152px 0;
+			background-image: url('images/i1_5160dafd.png');
+			display: inline-block;
+			margin: -1px;
+			height: 30px;
+			width: 30px;
+			
+			background-size: 908px 52px;
+			/*font-weight: bold;
+			text-align: center;
+			line-height: 29px;
+			color: buttontext;
+			padding: 2px 6px 3px;
+			border: 2px outset buttonface;*/
+		}
+		.rightHolder {
+			width:100%;
+			/*height:60px;*/
+			vertical-align: middle;
+			line-height:58px;
+			margin-top: 1px;
+		}
+		.signIn {
+			padding-left:15px;
+			top:2px;
+		}
+		.footer {
+			background: #f2f2f2;
+			border-top: 1px solid #e4e4e4;
+			padding-top: 18px;
+			bottom:0;
+		}
+		.footerInfo {
+			display:inline-block;
+		}
+
+		.locationInfo {
+			margin-left:135px;
+			line-height: 25px;
+			color: #aaa;
+			display: block;
+			font-size: small;
+			font-family: arial, sans-serif;
+		}
+		.darkerHalf {
+			color:#777;
+		}
+		.helpButtons {
+			position: relative;
+			display: block;
+			height:40px;
+			color:#222;
+			font-size: small;
+			font-family: arial, sans-serif;
+
+		}
+		.hButtons {
+			margin-left: 135px;
+			line-height: 40px;
+			color:#777;
+		}
+		.send-feedback, .Privacy-Terms {
+			padding-left: 27px;
+		}
+	</style>
 </head>
 <body>
 	<div class="mainContainer">
 		<div class="headBar">
-			<div class="leftHead">
-				<div class="logo"><img src="" alt=""></div>
-				<div class="searchField">
-					<table class="searchOptions">
-						<tr>
-							<td class="sField">
-								<input type="text" class="textEntry">
-							</td>
-							<td class="vSearch">
-								<img src="" alt="">
-							</td>
-						</tr>
-					</table>
-					<button class="searchButton"></button>
-				</div>
-			</div>
 			<div class="rightHead">
-				<div class="apps">
-					<img src="" alt="">
-				</div>
-				<div class="signIn">
-					<button>
-						Sign in
-					</button>
+				<span class="rightHolder">
+					<div class="apps">
+						<img class="icons" src="images/icons.png" alt="">
+					</div>
+					<div class="signIn">
+						<button id="sign-in">
+							Sign in
+						</button>
+					</div>
+				</span>
+			</div>
+			<div class="logo">
+				<span class="logo2"><img src="images/logo11w.png" alt=""></span>
+			</div>
+			<div class="searchField">
+				<div class="middleSearchField">
+					<div class="innerSearchField">
+						<div class="inner-2">
+							<div id="tableHolder">
+								<table cellspacing="0" cellpadding="0" style="height:27px; padding:0px" class="searchOptions">
+									<tr>
+										<td class="sField">
+											<input type="text" class="textEntry">
+										</td>
+										<td class="vS">
+											<div class="iconHolder">
+												<span class="vSearch"></span>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div><div class="sbHolder">
+								<button class="searchButton"><span class="searchIcon"></span></button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="mainContent">
 			<div class="subMenu">
 				<div class="menuItems">
-					<div class="web"></div>
-					<div class="images"></div>
-					<div class="videos"></div>
-					<div class="shopping"></div>
-					<div class="maps"></div>
-					<div class="more"></div>
-					<sediv class="sarchTools"></div>
+					<div class="web">Web</div>
+					<div class="images">Images</div>
+					<div class="videos">Videos</div>
+					<div class="shopping">Shopping</div>
+					<div class="news">News</div>
+					<div class="more">More</div>
+					<sediv class="sarchTools">Search Tools</div>
 				</div>
 			</div>
 			<div class="results">
 				
 			</div>
 			<div class="related">
-				
+				Searches related to this thing
 			</div>
 			<div class="morePages">
 				
@@ -58,10 +354,14 @@
 		</div>
 		<div class="footer">
 			<div class="locationInfo">
-				
+				Grove City, OH - From your Internet address - <span class="darkerHalf">Use Precise location - Learn more</span>
 			</div>
 			<div class="helpButtons">
-				
+				<div class="hButtons">
+					<div class="footerInfo help">Help</div>
+					<div class="footerInfo send-feedback">Send feedback</div>
+					<div class="footerInfo Privacy-Terms">Privacy & Terms</div>
+				</div>
 			</div>
 		</div>
 		
