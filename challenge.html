@@ -285,6 +285,110 @@
 		.send-feedback, .Privacy-Terms {
 			padding-left: 27px;
 		}
+		.subMenu {
+			background-color: #fff;
+			color:#666;
+			position:relative;
+			display:block;
+			font-size: small;
+			font-family: arial, sans-serif;
+		}
+		.subMenu2 {
+			height:59px;
+			line-height:54px;
+			background-color: #fff;
+			border-bottom:1px solid #ebebeb;
+			padding:0;
+			position: relative;
+			display:block;
+			color:#666;
+			font-family: arial, sans-serif;
+			font-size: small;
+		}
+		.menuItems {
+			display: inline-block;
+			float:left;
+			position:relative;
+			width:700px;
+
+		}
+		.web {
+			height:54px;
+			margin:2px 8px 0;
+			margin-left: 128px;
+			border-bottom: 3px solid #dd4b39;
+			color:#dd4b39;
+			font-weight: bold;
+			padding: 0 8px;
+			display: inline-block;
+
+		}
+		.mI {
+			display: inline-block;
+		}
+		.insideMenu {
+			color:#777;
+			display:inline-block;
+			margin:0 8px;
+			padding:0 8px;
+			cursor:pointer;
+			text-decoration: none;
+		}
+		.littleArrow {
+			border-color: #909090 transparent;
+			border-style: solid;
+			border-width: 4px 4px 0 4px;
+			width:0;
+			height:0;
+			margin-left: -2px;
+			top:50%;
+			margin-top:-2px;
+			position: absolute;
+			
+		}
+		.MoreLabel {
+			padding-right: 6px;
+		}
+		.searchTools {
+			color:#777;
+			text-decoration: none;
+			border:1px solid transparent;
+			display:inline-block;
+			min-width: 54px;
+			text-align: center;
+			border-radius: 2px;
+			padding: 4px 8px;
+			line-height: 19px;
+			margin-left: 9px;
+			cursor:pointer;
+			margin-right: 24px;
+		}
+		.settingsButtonContainer {
+			float:right;
+			position: relative;
+			right:28px;
+			display: block;
+			-webkit-margin-before:1em;
+			-webkit-margin-after:1em;
+			-webkit-margin-start:0px;
+			-webkit-margin-end:0px;
+			-webkit-padding-start:40px;
+			/*line-height:54px;
+			color:#666;
+			font-size: small;
+			font-family: arial, sans-serif;*/
+		}
+		.settingsButtonContainer2 {
+			display: inline-block;
+			position: relative;
+			margin-left: 16px;
+			margin-top: 1px;
+			vertical-align: middle;
+			line-height: 1.2;
+		}
+		.settingsButton {
+			
+		}
 	</style>
 </head>
 <body>
@@ -332,16 +436,14 @@
 		</div>
 		<div class="mainContent">
 			<div class="subMenu">
-				<div class="menuItems">
-					<div class="web">Web</div>
-					<div class="images">Images</div>
-					<div class="videos">Videos</div>
-					<div class="shopping">Shopping</div>
-					<div class="news">News</div>
-					<div class="more">More</div>
-					<sediv class="sarchTools">Search Tools</div>
+				<div class="subMenu2">
+					<div class="menuItems">
+						<div class="mI web">Web</div><div class="mI videos"><span class="insideMenu">Videos</span></div><div class="mI images"><span class="insideMenu">Images</span></div><div class="mI news"><span class="insideMenu">News</span></div><div class="mI shopping"><span class="insideMenu">Shopping</span></div><div class="mI more"><span class="insideMenu"><span class="MoreLabel">More</span><span class="littleArrow"></span></span></div><div class="searchTools">Search tools</div>
+					</div>
+					<div class="settingsButtonContainer"><span class="settingsButtonContainer2"><span class="settingsButton"><span class="settingsButtonImage"></span></span></span></div>
 				</div>
 			</div>
+
 			<div class="results">
 				
 			</div>
