@@ -1,272 +1,249 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>J Miller Project Odin Projet 1</title>
-		<style type="text/css">
-/*----------GLOBAL STYLES---------*/
-			html, body {
-				position:relative;
-				min-height:100%;
-				height:100%;
-				min-width: 980px;
-			}
-			body, .links1, .links2, .links1 div, .links2 div {
-				margin:0;
-			}
-			input {
-				border:none;
-			}
-			input:focus {
-				outline-width:0;
-				border:none;
-			}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project Odin Google Search Page</title>
+</head>
+<style>
+	html, body, ul {
+		padding:0;
+		margin:0;
+	}
 /*----------HEADER STYLES---------*/
-			#headerCont {
-				height:60px;
-				width:100%;
-			}
-				#header {
-					padding:15px 30px 0 30px;
-					padding-top:15px;
-					padding-left:30px;
-					padding-right:30px;
-					text-align: right;
-					flex:1 1 auto;
-				}
-					.links1, .links2 {
-						display:inline-block;
-						font: 13px/27px arial, sans-serif;
-						vertical-align: middle;
-					}
-					.links1 {
-						padding-right:11px;
-					}
-						.links1 div, .links2 div {
-							display: inline-block;
-							vertical-align: middle;
-						}
-						.links1 div:hover {
-							text-decoration: underline;	
-						}
-						.links1 div {
-							padding-left:11px;
-						}
-							#imgContainer{
-								width:30px;
-								height:30px;
-								overflow: hidden;
-							}
-								#appsIcon {
-									position:relative;
-									top:-854px;
-									left:-69px;
-									opacity:.6;
-								}
-								#appsIcon:hover {
-									opacity:1;
-								}
-							#siCont {
-								padding-left:11px;
-							}
-								#sign-in {
-									background-color: #4285f4;
-									border: 1px solid #4285f4;
-									border-radius: 2px;
-									color:white;
-									width:71px;
-									height:30px;
-									font-family: arial, sans-serif;
-									font-weight:bold;
-								}
-/*-------MAIN CONTENT STYLES------*/
-			#mainContent {
-				padding-bottom:40px;
-			}
-				#logoCont {
-					text-align:center;
-					margin: 20px auto 0 auto;
-					height:230px;
-				}
-					#mainLogo {
-						padding-top:112px;
-					}
-				#miscCont {
-					text-align: center;
-				}
-					
-					#tableHolder {
-						min-width: 20px;
-						min-height: 20px
-						display:block;
-						margin:auto;
-						max-width: 572px;
-						min-width: 572px;
-						height:30px;
-						background-clip: padding-box;
-						background-color: #ffffff;
-						border: 1px solid #cdcdcd;
-						border-color:rgba(0,0,0,.15);
-						box-sizing: border-box;
-						vertical-align: middle;
-						padding-top: 3px;
-						padding-left:9px;
-					}			
-					#tableHolder:hover {
-						border-color: rgba(0,0,0,.3);
-					}
-					#tableHolder:active {
-						border-color:#4285f4;
-					}
-						table {
-							width:100%;
-							height:27px;
-							padding:0;
-							display:inline-block;
-						}
-							td {
-								min-height: 20px;
-								min-width: 20px;
-							}
-							.srInput {
-								width:541px;
-							}
-							.vS {
-								vertical-align: top;
-							}
-								.iconHolder {
-									vertical-align: middle;
-								}
-									.vSearch {
-										width:29px;
-										height:23px;
-										background:url(images/vSearch.gif) no-repeat center;
-										background-size: 14px 19px;
-										border:none;
-										display: inline-block;
-										vertical-align: middle;
-										opacity: .6;						
-									}
-									.vSearch:hover {
-										opacity: 1;
-									}
-								td input {
-									width: 100%;
-								}	
-					#mainContent button {
-						margin: 16px 8px;
-						border: 1px solid #dcdcdc;
-						border-color:rgba(0,0,0,0.1);
-						color:#444;
-						background:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
-						background: linear-gradient(top,#f5f5f5,#f1f1f1);
-						cursor:default;
-						display:inline-block;
-						font-weight: bold;
-						height:29px;
-						line-height: 29px;
-						min-width: 54px;
-						border-radius: 2px;
-						padding: 0 8px;
-						vertical-align: 2px;
-					}
-					#mainContent button span {
-						font: bold 11px/27px Arial, sans-serif;
-						vertical-align: top;
-					}
-/*----------FOOTER STYLES---------*/
-		#footer {
-			position: absolute;
-			bottom:0;
-			min-height: 42px;
-			/*height:100%;*/
-			display:block;
-			overflow: auto;
-			width:100%;
-			min-width: 980px;
+	.header {
+		width:100%;
+		height:60px;
+		min-width: 980px;
+	}
+		.headerElements {
+			text-align: right;
+			height: 60px;
+			padding: 0 30px;
 		}
-			.footerBox {
-				font-size: small;
-				background: #f2f2f2;
-				border-top:1px solid #e4e4e4;
-				line-height: 40px;
-				width:100%;
-				position:absolute;
-				bottom:0;
-				min-width:980px;
-				color:#222;
+			ul {
 				display:block;
+				font-size: small;
+				right:0px;
+				font-family: arial, sans-serif;
+				list-style-type: none;
+				height:60px;
+				vertical-align: middle;
 			}
-				.rightFooter, .leftFooter {
-					margin-right: 30px;
-					white-space: nowrap;
-					font-family:arial, sans-serif;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 60px;
+				color:#222;
+			}
+			.Images, .Gmail, .You {
+				margin-left: 11px;
+				cursor:pointer;
+			}
+			.You:hover, .Images:hover, .Gmail:hover {
+				text-decoration: underline;
+			}
+				.headerButtons {
+					line-height: normal;
+					height:34px;
+					line-height: 30px
 				}
-				.rightFooter {
-					float: right;
-				}
-				.leftFooter {
-					margin-left: 30px;
-				}
-					.bottomLinks {
-						display: inline-block;
-						color:#666;
-						padding:0;
-						margin:0;
-						line-height: 40px;
+					.SIbutton {
+						display:inline-block;
+						background-color: #4285f4;
+						height:28px;
+						line-height: 28px;
+						vertical-align:middle;
+						width:69px;
+						text-align: center;
+						color:white;
+						font-family: arial, sans-serif;
+						font-weight: bold;
+						font-size: small;
+						border: 1px solid #4285f4;
+						border-radius: 2px;
+						margin-left:15px;
 					}
-					.bottomLinks:hover {
-						text-decoration: underline;
+					.apps {
+						display:inline-block;
+						height:30px;
+						width:30px;
+						background-image: url("images/i1_5160dafd.png");
+						background-size: 908px 52px;
+						background-position: -222px 0;
+						line-height:28px;
+						vertical-align: middle;
+						opacity:.6;
+						margin-left: 11px;
 					}
-					.leftPadding {
-						padding-left: 27px;
-					}		
-		</style>
-	</head>
-	<body>
-		<div id="headerCont">
-			<div id="header">
-				<div class="links1">
-					<div>+You</div>
-					<div>Gmail</div>
-					<div>Images</div>
-				</div>
-				<div class="links2">
-					<div id="imgContainer"><img id="appsIcon" src="images/icons.png" alt=""></div>
-					<div id="siCont"><button id="sign-in">Sign In</button></div>
-				</div>
-			</div>
-		</div><!--apps icon background-position: -69px -854px; opacity: .55; 30x30; -->
-		<div id="mainContent">
-			<div id="logoCont">
-				<div id="mainLogo"><img src="images/logo11w.png" height="95" width="269"></div>
-			</div>
-			<div id="miscCont">
-				<div id="tableHolder">
-					<table cellspacing="0" cellpadding="0" style="height:27px; padding:0px">
-						<tr>
-							<td class="srInput"><input type="text"></td>
-							<td class="vS"><div class="iconHolder"><span class="vSearch"></span></div></td>
-						</tr>
-					</table>
-				</div>
-				<button class="srch"><span>Google Search</span></button><button class="srch"><span>I'm Feeling Lucky</span></button>
+					.apps:hover {
+						opacity:1;
+					}
+/*-------MAIN CONTENT STYLES------*/
+	.mainContent {
+		min-width: 980px;
+	}
+		.logo {
+			height:250px;
+			text-align: center;
+		}
+			.logoImage {
+				margin-top: 132px;
+				height:95px;
+				width:269px;
+			}
+		.searchElements {
+			text-align: center;
+		}
+		.searchBar {
+			display: inline-block;
+			border: 1px solid #cdcdcd;
+			width:561px;
+			height:25px;
+			margin-bottom: 0;
+			line-height: 28px;
+			cursor:pointer;
+			text-align: right;
+			vertical-align: middle;
+			padding-left:9px;
+			padding-top: 3px;
+		}
+		.searchBar:hover {
+			border-color: rgba(0,0,0,.3);
+		}
+			.searchField, .voiceSearch {
+				display: inline-block;
+			}
+			.searchField{
+				display:block;
+				width:531px;
+				border:none;
+				/*background-color: black;*/
+				line-height:;
+				font-family: Arial;
+				font-size: 13px;
+				line-height: normal;
+				height:16px;
+				margin: 2px 0;
+			}
+			.searchField:focus {
+				outline:none;
+			}
+			.voiceSearch {
+				display:block;
+				width:29px;
+				height:23px;
+				background: url(images/vSearch.gif) no-repeat center;
+				background-size: 14px 19px;
+				border:none;
+				vertical-align: middle;
+				opacity:.6;
+				right:0;
+				float:right;
+				/*margin-top: 3px;*/
+			}
+			.voiceSearch:hover {
+				opacity:1;
+			}
+		.searchButtons {
+			margin:0;
+			padding:0;
+		}
+			.searchButton {
+				display:inline-block;
+				margin:0;
+				margin:16px 6px;
+				height:29px;
+				line-height: 29px;
+				border: 1px solid #dcdcdc;
+				border-radius: 2px;
+				background-color: #ffffff;
+				padding: 0 8px;
+				background: linear-gradient(top,#f5f5f5,#f1f1f1);
+				background: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+			}
+				.searchButton span {
+					font-family: Arial, sans-serif;
+					font-size: 11px;
+					line-height: 27px;
+					font-weight: bold;
+					color:#444;
+					vertical-align: top;
+				}
+/*----------FOOTER STYLES---------*/
+	.footer {
+		position: absolute;
+		bottom: 0;
+		height:40px;
+		border-top:1px solid #e4e4e4;
+		background-color: #f2f2f2;
+		width:100%;
+		min-width: 980px;
+	}
+		.footer ul {
+			height:40px;
+		}
+		.ulLeft {
+			float:left;
+		}
+		.ulRight{
+			float:right;
+		}
+			.footer ul li {
+				display:inline-block;
+				color:#666;
+				line-height: 40px;
+				font-family: arial, sans-serif;
+				font-size: small;
+			}	
+			#Advertising {
+				margin-left: 30px;
+			}
+			#Business, #About {
+				margin-left: 27px;
+			}
+			#PandT {
+				margin-right: 27px;
+			}
+			#Settings {
+				margin-right: 30px;
+			}
+</style>
+<body>
+	<div class="header">
+		<div class="headerElements">
+			<ul>
+				<li class="You"><span>+You</span></li>
+				<li class="Gmail"><span>Gmail</span></li>
+				<li class="Images"><span>Images</span></li>
+				<li><div class="headerButtons"><span class="apps"></span><div class="SIbutton">Sign In</div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="mainContent">
+		<div class="logo">
+			<img class="logoImage" src="images/logo11w.png" alt="">
+		</div>
+		<div class="searchElements">
+			<div class="searchBar">
+				<div class="voiceSearch"></div>
+				<input class="searchField" type="text">
+			</div><!--
+		 --><div class="searchButtons">
+				<button class="searchButton"><span>Google Search</span></button>
+				<button class="searchButton"><span>I'm Feeling Lucky</span></button>
 			</div>
 		</div>
-		<div id="footer">
-			<div class="footerBox">
-				<div class="rightFooter">
-					<div class="bottomLinks">
-						Privacy & Terms
-					</div>
-					<div class="bottomLinks leftPadding">Settings</div>
-				</div>
-				<div class="leftFooter">
-					<div class="bottomLinks">Advertising</div>
-					<div class="leftPadding bottomLinks">Business</div>
-					<div class="leftPadding bottomLinks">About</div>
-				</div>
-			</div>
-
-		</div>
-	</body>
+	</div>
+	<div class="footer">
+		<ul class="ulLeft">
+			<li id="Advertising">Advertising</li>
+			<li id="Business">Business</li>
+			<li id="About">About</li>
+		</ul>
+		<ul class="ulRight">
+			<li id="PandT">Privacy & Terms</li>
+			<li id="Settings">Settings</li>
+		</ul>
+	</div>
+</body>
 </html>
